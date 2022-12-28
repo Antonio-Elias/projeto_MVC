@@ -84,8 +84,39 @@ footer{
     padding: 30px;
 }
 
+/*task list*/
+
+.task-list{
+    list-style: none;
+    margin-top: 1em;
+}
+
+.task-list li{
+    padding: .5em;
+    margin-bottom: 1em;
+    border: 1px solid #efefef;
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-list .title{
+    font-weight: bold;
+    color: #db4c3f;
+    transition:  .5s;
+    font-size: 1.2em;
+}
+
+.task-list .title:hover{
+    color: #333;
+}
 
 
+.actions i{
+    font-size: 1.5em;
+    margin-right: .6em;
+    color: #333;
+}
 
-
-
+.actions i:hover{
+    color: #db4c3f;
+}
