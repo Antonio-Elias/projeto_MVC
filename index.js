@@ -8,6 +8,11 @@ const conn = require('./db/conn');
 const port = 3000;
 
 /**
+ * Models
+ */
+const Task = require('./models/Task');
+
+/**
  * engine e view engine
  */
 app.engine('handlebars', exphbs.engine());
@@ -38,6 +43,13 @@ app.use(express.static('public'));
 /**
  * executando a aplicação
  */
-app.listen(port, ()=>{
-    console.log(`Aplicação rodando em : http://localhost:${port}`);
-})
+
+conn.sync()
+    .then(()=>{
+        app.listen(port, ()=>{
+            console.log(`Aplicação rodando em : http://localhost:${port}`);
+        });
+    })
+    .catch((err) => {
+        console.log(`Erro ao executar a aplicação: ${err}`);
+    });
