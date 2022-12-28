@@ -38,7 +38,15 @@ app.use(express.json());
  */
 app.use(express.static('public'));
 
+/**
+ * Importando as rotas
+ */
+const taskRoutes = require('./routes/tasksRoutes');
 
+/**
+ * Usando rotas
+ */
+app.use('/tasks', taskRoutes);
 
 /**
  * executando a aplicação
