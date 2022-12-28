@@ -7,6 +7,7 @@ const Task = require('../models/Task');
  */
 
 module.exports = class TaskController{
+    
     static createTask(req,res){
         res.render('tasks/create');
     };
@@ -14,4 +15,21 @@ module.exports = class TaskController{
     static showTasks(req,res){
         res.render('tasks/all');
     };
+
+    static async createTaskSave(req, res){
+
+        console.log(req.body);
+        const task = {
+            title: req.body.title,
+            description: req.body.description,
+            done: false
+        };
+
+        //poderia ser implementado validaçãoe
+        //poderia processar o dados 
+
+        await Task.create(task);
+
+        res.redirect('/tasks');
+    }
 };
