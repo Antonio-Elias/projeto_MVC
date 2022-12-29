@@ -105,6 +105,10 @@ footer{
     transition:  .5s;
     font-size: 1.2em;
 }
+.title.done{
+    text-decoration: line-through;
+    color: #CCC;
+}
 
 .task-list .title:hover{
     color: #333;
@@ -132,3 +136,4 @@ footer{
     border: none;
     cursor: pointer;
 }
+
