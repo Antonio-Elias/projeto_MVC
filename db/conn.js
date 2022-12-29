@@ -1,6 +1,6 @@
 const { Sequelize } = require('sequelize'); // importa o sequelize
 
-// instancia o sequelize com as configurações do caminho usuario qual banco e onde o mesmo esta rodadondo
+// instancia o sequelize com as configurações do caminho usuario qual banco e onde o mesmo esta rodadondo **
 const sequelize = new Sequelize('nodemvc', 'root', '', {
     host: 'localhost',
     dialect: 'mysql'
