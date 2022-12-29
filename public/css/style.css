@@ -110,7 +110,9 @@ footer{
     color: #333;
 }
 
-
+.actions{
+    display: flex;
+}
 .actions i{
     font-size: 1.5em;
     margin-right: .6em;
@@ -119,4 +121,14 @@ footer{
 
 .actions i:hover{
     color: #db4c3f;
+}
+
+.actions form{
+    margin: 0;
+}
+
+.actions button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }

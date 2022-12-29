@@ -5,9 +5,15 @@
         <li>
             <a href="/" class="title">{{this.title}}</a>
             <div class="actions">
+                <!--Estamos usando a biblioteca do bootstrap icon, a mesma esta inportada na main.handlebars-->
                 <a href="/"><i class="bi bi-check"></i></a>
                 <a href="/"><i class="bi bi-pencil-square"></i></a>
-                <a href="/"><i class="bi bi-x-lg"></i></a>
+                <form action="/tasks/remove" method="post">
+                    <input type="hidden" name="id" value="{{this.id}}">
+                    <button type="submit">
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                </form>
             </div>
         </li>
     {{/each}}
